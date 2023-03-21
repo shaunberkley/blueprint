@@ -1,7 +1,7 @@
 {
   "name": "blueprint",
   "main": "dist/blueprint.common.js",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
