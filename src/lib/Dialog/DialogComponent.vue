@@ -76,66 +76,66 @@
 </template>
 
 <script lang="ts">
-import { ref } from "vue";
-import {
-    TransitionRoot,
-    TransitionChild,
-    Dialog,
-    DialogPanel,
-    DialogTitle,
-} from "@headlessui/vue";
-import { XMarkIcon } from "@heroicons/vue/20/solid";
-import ButtonComponent from "../components/ButtonComponent.vue";
-
-export default {
-    props: {
-        isOpen: {
-            type: Boolean,
-            default: false,
-        },
-        title: {
-            type: String,
-            required: true,
-        },
-        titleButtonEnabled: {
-            type: Boolean,
-            default: false,
-        },
-        disableClose: {
-            type: Boolean,
-            default: false,
-        },
-        maxWidth: {
-            type: String,
-            required: false,
-        },
-        maxHeight: {
-            type: String,
-            required: false,
-        },
-    },
-    components: {
+    import { ref } from "vue";
+    import {
         TransitionRoot,
         TransitionChild,
         Dialog,
         DialogPanel,
         DialogTitle,
-        XMarkIcon,
-        ButtonComponent,
-    },
-    setup(props, { emit }) {
-        function closeModal() {
-            emit("closeModal");
-        }
+    } from "@headlessui/vue";
+    import { XMarkIcon } from "@heroicons/vue/20/solid";
+    import ButtonComponent from "../Button/ButtonComponent.vue";
 
-        function titleButtonClicked() {
-            emit("titleButtonClicked");
-        }
+    export default {
+        props: {
+            isOpen: {
+                type: Boolean,
+                default: false,
+            },
+            title: {
+                type: String,
+                required: true,
+            },
+            titleButtonEnabled: {
+                type: Boolean,
+                default: false,
+            },
+            disableClose: {
+                type: Boolean,
+                default: false,
+            },
+            maxWidth: {
+                type: String,
+                required: false,
+            },
+            maxHeight: {
+                type: String,
+                required: false,
+            },
+        },
+        components: {
+            TransitionRoot,
+            TransitionChild,
+            Dialog,
+            DialogPanel,
+            DialogTitle,
+            XMarkIcon,
+            ButtonComponent,
+        },
+        setup(props, { emit }) {
+            function closeModal() {
+                emit("closeModal");
+            }
 
-        return {
-            closeModal,
-            titleButtonClicked,
-        };
-    },
-};
+            function titleButtonClicked() {
+                emit("titleButtonClicked");
+            }
+
+            return {
+                closeModal,
+                titleButtonClicked,
+            };
+        },
+    };
 </script>
