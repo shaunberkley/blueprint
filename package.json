@@ -1,13 +1,20 @@
 {
   "name": "vue-blueprint-js",
-  "main": "./blueprint.common.js",
+  "files": ["dist"],
+  "main": "./dist/blueprint.umd.js",
   "private": false,
-  "version": "0.1.2",
-  "type": "module",
+  "version": "0.1.4",
+  "module": "./dist/blueprint.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/blueprint.es.js",
+      "require": "./dist/blueprint.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "serve": "vite preview"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.12",
@@ -24,12 +31,8 @@
     "vuestic-ui": "^1.5.3"
   },
   "devDependencies": {
-    "@rollup/plugin-babel": "^6.0.3",
-    "@rollup/plugin-commonjs": "^24.0.1",
-    "@rollup/plugin-node-resolve": "^15.0.1",
-    "@rollup/plugin-terser": "^0.4.0",
-    "@vitejs/plugin-vue": "^4.1.0",
-    "rollup-plugin-vue": "^6.0.0",
-    "vite": "^4.2.0"
+    "@vitejs/plugin-vue": "^1.9.3",
+    "tailwindcss": "^2.2.17",
+    "vite": "^2.6.4"
   }
 }
