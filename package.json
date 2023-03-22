@@ -1,6 +1,8 @@
 {
   "name": "vue-blueprint-js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "main": "./dist/blueprint.umd.js",
   "private": false,
   "version": "0.1.4",
@@ -32,6 +34,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.9.3",
+    "sass": "^1.59.3",
     "tailwindcss": "^2.2.17",
     "vite": "^2.6.4"
   }

@@ -10,7 +10,7 @@ import DatepickerComponent from "./Datepicker/DatepickerComponent.vue";
 import DialogComponent from "./Dialog/DialogComponent.vue";
 import InputComponent from "./Input/InputComponent.vue";
 import LoaderComponent from "./Loader/LoaderComponent.vue";
-import LoadingBarComponent from "./LoadingBar/LoadingBarComponent.vue";
+import LoadingBarComponent from "./LoadingBar/LoadingPulseBarComponent.vue";
 import SelectComponent from "./Select/SelectComponent.vue";
 import TextareaComponent from "./Textarea/TextareaComponent.vue";
 import ToggleComponent from "./Toggle/ToggleComponent.vue";
