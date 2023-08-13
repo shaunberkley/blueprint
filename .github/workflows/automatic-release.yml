@@ -8,7 +8,16 @@ on:
       - 'package.json'
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm ci
   release:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -29,17 +38,9 @@ jobs:
       - name: Create GitHub Release
         run: |
           gh auth login --with-token <<< "${{ secrets.GITHUB_TOKEN }}"
-          gh release create v${{ steps.package.outputs.version }} --title "Release v${{ steps.package.outputs.version }}" --notes "Release notes for v${{ steps.package.outputs.version }}"
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - run: npm ci
+          gh release create v${{ steps.package.outputs.version }} --title "Release v${{ steps.package.outputs.version }}" --notes "Release notes for v${{ steps.package.outputs.version }}"  
   publish-npm:
-      needs: [release, build]
+      needs: release
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v3
