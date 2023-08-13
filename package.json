@@ -1,7 +1,7 @@
 {
   "name": "vue-blueprint-js",
   "private": false,
-  "version": "0.1.88",
+  "version": "0.1.89",
   "type": "module",
   "files": [
     "dist",
