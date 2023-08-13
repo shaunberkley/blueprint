@@ -32,7 +32,7 @@
                                 maxHeight,
                                 padding ?? 'p-6',
                             ]"
-                            class="bg-white relative transform overflow-hidden rounded-2xl bg-base-100 p-6 text-left align-middle shadow-xl transition-all"
+                            class="bg-white relative transform overflow-hidden rounded-2xl bg-base-100 text-left align-middle shadow-xl transition-all"
                         >
                             <TransitionChild as="template">
                                 <div
