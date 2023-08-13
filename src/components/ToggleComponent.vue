@@ -69,7 +69,7 @@
                 emit("update:modelValue", value);
                 emit("updated", value);
             }
-
+            console.log("test");
             return {
                 enabled,
                 emit,
