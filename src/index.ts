@@ -54,6 +54,7 @@ export {
     SelectComponent,
     TextareaComponent,
     ToggleComponent,
+    TooltipComponent,
 };
 
 export default VueBlueprint;
