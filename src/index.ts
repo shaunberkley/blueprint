@@ -15,6 +15,7 @@ import LoadingBarComponent from "./components/LoadingPulseBarComponent.vue";
 import SelectComponent from "./components/SelectComponent.vue";
 import TextareaComponent from "./components/TextareaComponent.vue";
 import ToggleComponent from "./components/ToggleComponent.vue";
+import TooltipComponent from "./components/TooltipComponent.vue";
 import FolderNavigationComponent from "./components/FolderNavigationComponent.vue";
 
 const VueBlueprint = {
@@ -34,6 +35,7 @@ const VueBlueprint = {
             app.component("SelectComponent", SelectComponent),
             app.component("TextareaComponent", TextareaComponent),
             app.component("ToggleComponent", ToggleComponent);
+        app.component("TooltipComponent", TooltipComponent);
     },
 };
 
