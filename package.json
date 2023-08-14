@@ -68,6 +68,7 @@
     "date-fns": "^2.29.3",
     "jdenticon": "^3.2.0",
     "typewriter-effect": "^2.19.0",
+    "vite-plugin-css-injected-by-js": "^3.3.0",
     "vue-draggable-next": "^2.1.1",
     "vuedraggable": "^4.1.0",
     "vuestic-ui": "^1.5.3"
